@@ -1,0 +1,9 @@
+{
+  "upload-to-cloud": "Upload to Cloud",
+  "key": "Upload to Cloud is a user-friendly workflow tool that helps you quickly upload files to the internet and get shareable links. Think of it as a simple way to share files without needing technical knowledge - just like using a cloud storage service, but integrated into automated workflows.",
+  "upload-file-to-remote-cache": "Upload File to Remote Cache",
+  "upload-local-pdf-file-to-cloud-storage-and-generate-a-temporary": "Upload local PDF file to cloud storage and generate a temporary accessible URL",
+  "upload-file-to-cloud": "Upload File to Cloud",
+  "pass-the-file-to-the-cloud-and-get-an-online-address-valid-time": "Pass the file to the cloud and get an online address. Valid time 24 hours for temporary upload",
+  "local-file-path-to-upload-to-cloud-storage": "Local file path to upload to cloud storage"
+}

@@ -1,0 +1,9 @@
+{
+  "upload-to-cloud": "上传到云端",
+  "key": "上传到云是一款用户友好的工作流程工具，帮助您快速将文件上传到互联网并获取可分享的链接。可以把它看作是一种无需技术知识即可轻松分享文件的方法——就像使用云存储服务一样，但它已集成到自动化工作流程中。",
+  "upload-file-to-remote-cache": "上传文件到远程缓存",
+  "upload-local-pdf-file-to-cloud-storage-and-generate-a-temporary": "上传本地 PDF 文件到云存储，并生成一个临时可访问的 URL",
+  "upload-file-to-cloud": "上传文件到云端",
+  "pass-the-file-to-the-cloud-and-get-an-online-address-valid-time": "将文件传到云端并获取一个在线地址。临时上传的有效时间为 24 小时。",
+  "local-file-path-to-upload-to-cloud-storage": "上传到云存储的本地文件路径"
+}

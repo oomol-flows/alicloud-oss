@@ -1,0 +1,22 @@
+title: "%upload-file-to-cloud%"
+description: "%pass-the-file-to-the-cloud-and-get-an-online-address-valid-time%"
+icon: ":carbon:cloud-upload:"
+
+inputs_def:
+  - handle: file
+    description: "%local-file-path-to-upload-to-cloud-storage%"
+    json_schema:
+      type: string
+      ui:widget: file
+
+outputs_def:
+  - handle: remote_url
+    description: "Presigned URL for accessing the uploaded file (valid for 24 hours)"
+    json_schema:
+      type: string
+      title: Presigned URL
+
+executor:
+  name: nodejs
+  options:
+    entry: index.ts

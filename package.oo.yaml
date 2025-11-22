@@ -1,0 +1,11 @@
+version: 0.0.1
+scripts:
+  bootstrap: |
+    npm install
+    poetry install --no-root
+displayName: "%alicloud-oss%"
+name: alicloud-oss
+icon: ./icon.png
+description: "%key%"
+repository: https://github.com/oomol-flows/alicloud-oss.git
+releaseNotes: init
