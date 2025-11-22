@@ -5,5 +5,8 @@
   "upload-local-pdf-file-to-cloud-storage-and-generate-a-temporary": "Upload local PDF file to cloud storage and generate a temporary accessible URL",
   "upload-file-to-cloud": "Upload File to Cloud",
   "pass-the-file-to-the-cloud-and-get-an-online-address-valid-time": "Pass the file to the cloud and get an online address. Valid time 24 hours for temporary upload",
-  "local-file-path-to-upload-to-cloud-storage": "Local file path to upload to cloud storage"
+  "local-file-path-to-upload-to-cloud-storage": "Local file path to upload to cloud storage",
+  "presigned-url-for-accessing-the-uploaded-file-valid-for-24-hours": "Presigned URL for accessing the uploaded file (valid for 24 hours)",
+  "display-name": "Alicloud OSS",
+  "description": "Upload files to Alibaba Cloud OSS and get temporary shareable links valid for 24 hours with automatic cleanup"
 }

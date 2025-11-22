@@ -3,9 +3,9 @@ scripts:
   bootstrap: |
     npm install
     poetry install --no-root
-displayName: "%alicloud-oss%"
+displayName: "%display-name%"
 name: alicloud-oss
 icon: ./icon.png
-description: "%key%"
+description: "%description%"
 repository: https://github.com/oomol-flows/alicloud-oss.git
 releaseNotes: init
