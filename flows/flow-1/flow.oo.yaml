@@ -4,5 +4,5 @@ nodes:
     description: "%upload-local-pdf-file-to-cloud-storage-and-generate-a-temporary%"
     inputs_from:
       - handle: file
-        value: /oomol-driver/oomol-storage/processed_image.png
+        value: /oomol-driver/oomol-storage/3ae94ed1-bbec-4a17-88cb-2131c0a9d3e1.jpg
     task: self::upload-to-cloud

@@ -7,7 +7,9 @@
       "mcp__oomol__listBlocks",
       "mcp__oomol__listBlockHandles",
       "mcp__oomol__searchPackages",
-      "mcp__oomol__usePackage"
+      "mcp__oomol__usePackage",
+      "Bash(mcp__oomol__refreshEditors)",
+      "Bash(npx @oomol/cli@latest mcp:*)"
     ],
     "deny": [],
     "ask": []

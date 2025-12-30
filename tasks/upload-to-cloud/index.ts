@@ -322,6 +322,50 @@ class MultipartUploader {
     }
 }
 
+// 获取MIME类型的辅助函数
+function getMimeType(filename: string): string {
+  const ext = path.extname(filename).toLowerCase();
+  const mimeTypes: Record<string, string> = {
+    // 图片
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".png": "image/png",
+    ".gif": "image/gif",
+    ".webp": "image/webp",
+    ".svg": "image/svg+xml",
+    ".bmp": "image/bmp",
+    ".ico": "image/x-icon",
+    // 视频
+    ".mp4": "video/mp4",
+    ".avi": "video/x-msvideo",
+    ".mov": "video/quicktime",
+    ".wmv": "video/x-ms-wmv",
+    ".flv": "video/x-flv",
+    ".webm": "video/webm",
+    // 音频
+    ".mp3": "audio/mpeg",
+    ".wav": "audio/wav",
+    ".ogg": "audio/ogg",
+    ".m4a": "audio/mp4",
+    // 文档
+    ".pdf": "application/pdf",
+    ".doc": "application/msword",
+    ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ".xls": "application/vnd.ms-excel",
+    ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    ".ppt": "application/vnd.ms-powerpoint",
+    ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ".txt": "text/plain",
+    ".csv": "text/csv",
+    ".json": "application/json",
+    ".xml": "application/xml",
+    ".zip": "application/zip",
+    ".rar": "application/x-rar-compressed",
+    ".7z": "application/x-7z-compressed",
+  };
+  return mimeTypes[ext] || "application/octet-stream";
+}
+
 // 单文件上传函数
 async function uploadFile(
   fileData: Buffer,
@@ -341,8 +385,11 @@ async function uploadFile(
         formData.append(key, value);
       });
 
-      // 创建文件blob，强制设置为application/octet-stream
-      const fileBlob = new Blob([new Uint8Array(fileData)], { type: "application/octet-stream" });
+      // 获取正确的MIME类型
+      const mimeType = getMimeType(filename);
+
+      // 创建文件blob，使用正确的MIME类型
+      const fileBlob = new Blob([new Uint8Array(fileData)], { type: mimeType });
 
       // 添加文件到FormData
       formData.append("file", fileBlob, filename);
@@ -393,8 +440,11 @@ async function uploadFileMultipart(
     const fileBuffer = fs.readFileSync(filePath);
     const filename = path.basename(filePath);
 
+    // 获取正确的MIME类型
+    const mimeType = getMimeType(filename);
+
     // 创建 File 对象
-    const file = new File([fileBuffer], filename, { type: "application/octet-stream" });
+    const file = new File([fileBuffer], filename, { type: mimeType });
 
     const uploader = new MultipartUploader(
         file,
